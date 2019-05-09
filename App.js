@@ -3,11 +3,7 @@ import { Text, View, StyleSheet, Button, FlatList } from 'react-native';
 import { Constants } from 'expo';
 
 // You can import from local files
-import AssetExample from './components/AssetExample';
 import DiceSet from './components/DiceSet';
-
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -156,5 +152,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#302E2E',
     padding: 8,
   },
-  
+
 });
