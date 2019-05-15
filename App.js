@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Button, FlatList } from 'react-native';
+import { Text, View, StyleSheet, FlatList } from 'react-native';
+import { Button } from 'react-native-elements';
 import { Constants } from 'expo';
 
 // You can import from local files
