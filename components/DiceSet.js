@@ -3,11 +3,11 @@ import {
   Text,
   View,
   StyleSheet,
-  Button,
   FlatList,
   Dimensions,
 } from 'react-native';
-import { Constants } from 'expo';
+import { defaultTheme } from '../themes/Themes.js'
+import { ThemeProvider, Button } from 'react-native-elements';
 
 export default function DiceSet(props) {
   return (
@@ -22,16 +22,10 @@ export default function DiceSet(props) {
               d{item} x {props.rollData[item]}
             </Text>
             <View style={styles.buttonContainer}>
-              <Button
-                style={styles.button}
-                title="+"
-                onPress={() => props.addDie(item)}
-              />
-              <Button
-                style={styles.button}
-                title="-"
-                onPress={() => props.dropDie(item)}
-              />
+              <ThemeProvider theme={defaultTheme}>
+                <Button title="+" onPress={() => props.addDie(item)} />
+                <Button title="-" onPress={() => props.dropDie(item)} />
+              </ThemeProvider>
             </View>
           </View>
         )}
@@ -71,11 +65,11 @@ const styles = StyleSheet.create({
   },
 
   rollButton: {
-    backgroundColor: '#3D8B83'
+    backgroundColor: '#7ab6aa'
   },
 
   dropButton: {
-    backgroundColor: '#3D8B83'
+    backgroundColor: '#d11414'
   },
 
   total: {
