@@ -134,7 +134,7 @@ export default class App extends React.Component {
               roll={() => this.roll(index)}
               addDie={die => this.addDie(index, die)}
               dropDie={die => this.dropDie(index, die)}
-              dropSet={() => this.roll(index)}
+              dropSet={() => this.dropSet(index)}
             />
           )}
         />
