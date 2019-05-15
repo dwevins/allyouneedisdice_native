@@ -38,7 +38,7 @@ export default function DiceSet(props) {
       />
       <Text style={styles.total}>Total: {props.result}</Text>
       <View>
-        <Button title="Roll" onPress={() => props.roll()} />
+        <Button title="Roll" buttonStyle={styles.rollButton} onPress={() => props.roll()} />
       </View>
     </View>
   );
@@ -69,9 +69,8 @@ const styles = StyleSheet.create({
     width: '100%'
   },
 
-  button: {
-    width: '50%',
-    // backgroundColor:'##3D8B84',
+  rollButton: {
+    backgroundColor: '#3D8B83'
   },
 
   total: {
